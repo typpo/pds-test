@@ -1,0 +1,1 @@
+-e git://github.com/typpo/pds4-tools.git#egg=pds4_tools
