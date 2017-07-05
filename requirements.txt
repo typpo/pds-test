@@ -1,1 +1,3 @@
--e git://github.com/typpo/pds4-tools.git#egg=pds4_tools
+numpy==1.13.0
+-e git://github.com/typpo/pds4-tools.git@e3f9d93b2924b432363ae87e3e196cb6fbc45cfa#egg=pds4_tools
+six==1.10.0
