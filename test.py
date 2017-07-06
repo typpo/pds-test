@@ -44,7 +44,12 @@ def load_hierarchy(path):
             coldef = fits.ColDefs(cols)
             tbhdu = fits.BinTableHDU.from_columns(coldef)
 
-            tbhdu.writeto('table.fits')
+            prihdr = fits.Header()
+            prihdr['COMMENT'] = 'Converted by PDSKit'
+            prihdu = fits.PrimaryHDU(header=prihdr)
+
+            thdulist = fits.HDUList([prihdu, tbhdu])
+            thdulist.writeto('table.fits')
 
             num_records += len(struct.data)
     print 'Total number of records:', num_records
