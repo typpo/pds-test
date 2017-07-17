@@ -1,5 +1,6 @@
-import os
 import fnmatch
+import os
+import sys
 
 import numpy as np
 from astropy.io import fits
@@ -67,4 +68,4 @@ def load_hierarchy(path):
     print 'Total number of records:', num_records
 
 if __name__ == '__main__':
-    load_hierarchy('./data/ldex_20161118/')
+    load_hierarchy(sys.argv[1])
